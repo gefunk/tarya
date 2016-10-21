@@ -1,0 +1,24 @@
+//- This is the new shipment page
+extends layout
+
+block content
+	h1 New Shipment
+	
+	#questions
+		.question
+			label Weight:
+			input(type="text", placeholder="how heavy?")
+			select
+				each weight, i in weights
+					option(value=i) #{weight}
+		.question
+			label How many pieces:
+			input(type="text", placeholder="number of pieces")
+
+		.question
+			label How big is it:
+			input(type="text", placeholder="total volume")
+			select
+				each vol, i in volume
+					option(value=i) #{vol}
+
